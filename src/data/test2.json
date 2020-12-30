@@ -1,0 +1,206 @@
+{
+  "header": {
+    "version": 0.1,
+    "build_date": "2020-08-23",
+    "tree_name": "Geschenke Arbeitnehmer",
+    "tree_slug": "geschenke-arbeitnehmer",
+    "start_node": "geschenke",
+    "tags": ["Zuwendung", "Steuer"],
+    "vars": {}
+  },
+  "betriebsveranstaltung": {
+    "name": "Betriebsveranstaltung",
+    "text": "<p>Erfolgt die &Uuml;berreichung im Rahmen einer Betriebsveranstaltung?</p>\n\n<p>-&gt; BMF v. 28.06.2018, Pauschalierung der Einkommensteuer bei Sachzuwendungen nach &sect; 37b EStG</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "wert-1102",
+      "1": "aufwendungen-442"
+    },
+    "action": {}
+  },
+  "aufwendungen-442": {
+    "name": "Aufwendungen 44.2",
+    "text": "<p>&Uuml;bersteigen die Aufwendungen die Grenze f&uuml;r Sachbez&uuml;ge von 44 ,- &euro;?</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "einnahme-beim-empfanger",
+      "1": "keine-einnahme"
+    },
+    "action": {}
+  },
+  "geschenke": {
+    "name": "Geschenke",
+    "text": "<p>Mit diesem Tool soll die lohnsteuererliche W&uuml;rdigung von Geschenken an Arbeitnehmer erleichtert werden.</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Start"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "aufmerksamkeit"
+    },
+    "action": {}
+  },
+  "wert-1102": {
+    "name": "Wert 110.2",
+    "text": "<p>Betragen die Aufwendungen des Arbeitgebers f&uuml;r diese Veranstaltung mehr als 110,- &euro; pro Arbeitnehmer?</p>\n\n<p>- z.B. Speisen, Getr&auml;nke, Musik und Geschenk</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Nein", "Ja"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "keine-einnahme",
+      "1": "einnahme-beim-empfanger"
+    },
+    "action": {}
+  },
+  "kein-runder-geburtstag": {
+    "name": "kein-runder-geburtstag",
+    "text": "<p>Wird das Geschenk aufgrund eines besonderen pers&ouml;nlichen Ereignisses zugewendet?</p>\n\n<p>(Hierbei sind auch Geschenke an Angeh&ouml;rige zu beachten)</p>\n\n<p>-&gt; R 19.6 I LStR</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "wert-60",
+      "1": "betriebsveranstaltung"
+    },
+    "action": {}
+  },
+  "wert-60": {
+    "name": "Wert 60",
+    "text": "<p>Betr&auml;gt der Wert des Geschenks mehr als 60,- &euro;?</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "einnahme-beim-empfanger",
+      "1": "keine-einnahme"
+    },
+    "action": {}
+  },
+  "wert-1101": {
+    "name": "Wert 110.1",
+    "text": "<p>Betr&auml;gt der Wert der Sachzuwendung mehr als 110,- &euro;?</p>\n\n<p>(Der Wert des Geschenks darf davon nur 60 ,- &euro; ausmachen.)</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "einnahme-beim-empfanger",
+      "1": "keine-einnahme"
+    },
+    "action": {}
+  },
+  "keine-einnahme": {
+    "name": "Keine Einnahme",
+    "text": "<p><span>Es handelt sich um keine Einnahme beim Empf&auml;nger und es ist keine Lohnsteuer zu erheben.</span></p>",
+    "inputs": [],
+    "rules": {},
+    "destination": {},
+    "action": {}
+  },
+  "einnahme-beim-empfanger": {
+    "name": "Einnahme beim Empf\u00e4nger",
+    "text": "<p><span>Es handelt sich um eine Einnahme beim Empf&auml;nger und es ist Lohnsteuer abzuf&uuml;hren!</span></p>\n\n<p><span>- Es kann gepr&uuml;ft werden, ob eine pauschale Besteuerung gem. &sect; 37b EStG in Frage kommt.</span></p>",
+    "inputs": [],
+    "rules": {},
+    "destination": {},
+    "action": {}
+  },
+  "aufmerksamkeit": {
+    "name": "Aufmerksamkeit",
+    "text": "<p>Handelt es sich bei dem Geschenk um eine Aufmerksamkeit?</p>\n\n<p>- z. B. Streuwerbeartikel mit einem Wert von maximal 10 &euro;</p>\n\n<p>&nbsp;</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "grenze-streuwerbeartikel",
+      "1": "test-ubliche-sachleistung"
+    },
+    "action": {}
+  },
+  "test-ubliche-sachleistung": {
+    "name": "Test \u00fcbliche Sachleistung",
+    "text": "<p>Handelt es sich um Sachleistungen des Arbeitgebers aus Anlass eines Ereignisses gem. R 19.3 II Nr. 3 LStR?</p>\n\n<p>- Diensteinf&uuml;hrung</p>\n\n<p>- Amts- oder Funktionswechsel</p>\n\n<p>- Arbeitnehmerjubil&auml;um</p>\n\n<p>- Verabschiedung eines Arbeitnehmers</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "wert-1101",
+      "1": "kein-runder-geburtstag"
+    },
+    "action": {}
+  },
+  "grenze-streuwerbeartikel": {
+    "name": "Grenze Streuwerbeartikel",
+    "text": "<p>&Uuml;bersteigt die Summe der Aufwendungen an den einzelnen Arbeitnehmer 44,- &euro; im Kalendermonat?</p>",
+    "inputs": [
+      {
+        "type": "button",
+        "display_as": "button",
+        "label": "",
+        "options": ["Ja", "Nein"]
+      }
+    ],
+    "rules": {},
+    "destination": {
+      "0": "einnahme-beim-empfanger",
+      "1": "keine-einnahme"
+    },
+    "action": {}
+  }
+}
