@@ -5,7 +5,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Header } from "./Header"
 import "./layout.css"
 
-export const Layout: React.FC = ({ children }) => {
+export const Layout: React.FC<{ className: string }> = ({
+  children,
+  className,
+}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,19 +22,9 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
+      <div className="mx-auto px-1 max-w-lg">
+        <main className={className}>{children}</main>
+        <footer className="bg-transparent py-4">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
@@ -39,8 +32,4 @@ export const Layout: React.FC = ({ children }) => {
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
