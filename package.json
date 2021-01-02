@@ -4,7 +4,9 @@
   "description": "",
   "version": "0.1.0",
   "author": "Open Legal Tech",
-  "contributors": ["Philipp Garbowsky, Aaron Rothmann"],
+  "contributors": [
+    "Philipp Garbowsky, Aaron Rothmann"
+  ],
   "dependencies": {
     "autoprefixer": "^10.1.0",
     "gatsby": "^2.26.1",

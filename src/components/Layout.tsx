@@ -1,11 +1,11 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { Header } from "./Header"
-import "./layout.css"
 
-export const Layout: React.FC<{ className: string }> = ({
+const centeredContent = "col-start-2"
+
+export const Layout: React.FC<{ className?: string }> = ({
   children,
   className,
 }) => {
@@ -20,16 +20,23 @@ export const Layout: React.FC<{ className: string }> = ({
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="mx-auto px-1 max-w-lg">
-        <main className={className}>{children}</main>
-        <footer className="bg-transparent py-4">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <div
+      className="grid h-screen"
+      style={{
+        gridTemplateColumns: "1fr 10fr 1fr",
+        gridTemplateRows: "auto 1fr auto",
+      }}
+    >
+      <Header
+        className={centeredContent}
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+      />
+      <main className={`${className} ${centeredContent}`}>{children}</main>
+      <footer className={`py-4 ${centeredContent}`}>
+        © {new Date().getFullYear()}, by
+        {` `}
+        <a href="https://www.open-legal-tech.org">Open Legal Tech</a>
+      </footer>
+    </div>
   )
 }
