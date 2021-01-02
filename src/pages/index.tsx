@@ -7,7 +7,7 @@ import { SEO } from "../components/Seo"
 export type treeMetaData = {
   name: string
   metadata: {
-    build_date: string
+    build_dae: string
     tags: string[]
     tree_name: string
     description: string

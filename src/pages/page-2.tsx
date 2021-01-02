@@ -7,13 +7,7 @@ import { SEO } from "../components/Seo"
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-    <iframe
-      src="https://builder.open-decision.org/publish/ueiddhscbw?embedded=true"
-      width="1000"
-      height="400"
-    >
-      Your browser does not support iFrames
-    </iframe>
+    <p className="pt-3">Hello from Page 2.</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
