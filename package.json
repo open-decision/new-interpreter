@@ -1,9 +1,10 @@
 {
-  "name": "",
+  "name": "base_website",
   "private": true,
   "description": "",
   "version": "0.1.0",
-  "author": "",
+  "author": "Open Legal Tech",
+  "contributors": ["Philipp Garbowsky, Aaron Rothmann"],
   "dependencies": {
     "autoprefixer": "^10.1.0",
     "gatsby": "^2.26.1",
@@ -28,9 +29,7 @@
     "@types/react-helmet": "^6.1.0",
     "prettier": "2.2.1"
   },
-  "keywords": [
-    ""
-  ],
+  "keywords": [],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
