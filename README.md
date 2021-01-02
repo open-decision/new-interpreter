@@ -21,10 +21,7 @@ The website should now be running on http://localhost:8000
 
 ## Environment
 
-[react-js](https://reactjs.org)
-
-[gatsby-js](https://www.gatsbyjs.com)
-
-[tailwindcss](https://tailwindcss.com)
-
-[TypeScript](https://www.typescriptlang.org)
+- [react-js](https://reactjs.org)
+- [gatsby-js](https://www.gatsbyjs.com)
+- [tailwindcss](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
