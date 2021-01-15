@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: ``,
+    title: `Shady Lawyer Inc.`,
     description: ``,
-    author: ``,
+    author: `Open Legal Tech e.V.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
