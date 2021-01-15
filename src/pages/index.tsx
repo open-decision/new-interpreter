@@ -4,17 +4,6 @@ import { Link } from "gatsby"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 
-export type treeMetaData = {
-  name: string
-  metadata: {
-    build_dae: string
-    tags: string[]
-    tree_name: string
-    description: string
-    start_node: string
-  }
-}
-
 const IndexPage = () => {
   return (
     <Layout className="space-y-3">
