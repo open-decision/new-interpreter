@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: ``,
-        short_name: ``,
+        name: `shady-lawyer`,
+        short_name: `shady-lawyer`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
