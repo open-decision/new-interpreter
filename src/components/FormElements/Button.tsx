@@ -1,9 +1,7 @@
 import React from "react"
 
-type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
-  label: string
-}
+type ButtonProps = React.HTMLAttributes<HTMLButtonElement>
 
 export const Button: React.FC<ButtonProps> = props => (
-  <button>{props.label}</button>
+  <button>{props.children}</button>
 )
