@@ -4,11 +4,7 @@ import { ButtonList } from "./ButtonList"
 import { Input } from "./Input"
 import { Textarea } from "./Textarea"
 
-export type formElement = input & {
-  onChange: (e: React.ChangeEvent<any>) => void
-}
-
-export const formElement = (input: formElement) => {
+export const formElement = (input: input) => {
   switch (input.type) {
     case "text":
       return <Input {...input} />
@@ -17,6 +13,7 @@ export const formElement = (input: formElement) => {
     case "number":
       return <Input {...input} />
     case "radio":
+    case "list":
       return <ButtonList {...input} />
     // case "list":
     //   return (

@@ -1,26 +1,29 @@
+import clsx from "clsx"
+import { Field } from "formik"
 import React from "react"
-import { formElement } from "./DynamicFormElement"
+import { input } from "../../types/global"
 
-export const ButtonList = (input: formElement) => {
+export const ButtonList = (input: input) => {
   return (
     <div
       role="group"
       aria-labelledby={input.label}
-      className="radio-toolbar flex space-x-4"
+      className="radio-toolbar mt-4 grid gap-2 lg:gap-4"
     >
-      {input.options.map((option, index) => (
-        <div key={option} className="flex-1 flex">
-          <input
+      {input.options?.map(option => (
+        <div key={option}>
+          <Field
             className="opacity-0 w-0"
-            value={index}
-            id={option}
-            name={input.name}
-            onChange={input.onChange}
+            value={option}
+            id={`${input.name}.${option}`}
             type={input.type}
+            name={input.name}
           />
           <label
-            className="bg-gray-100 px-3 py-2 border-2 border-gray-700 rounded-sm flex-1 flex justify-center text-xl shadow-sm hover:shadow-lg transition-shadow"
-            htmlFor={option}
+            className={clsx(
+              "bg-purple-50 px-3 py-2 border-4 border-purple-200 rounded-md flex-1 flex justify-center text-lg lg:text-xl shadow-sm hover:shadow-lg transition-shadow text-purple-900"
+            )}
+            htmlFor={`${input.name}.${option}`}
           >
             {option}
           </label>
