@@ -9,6 +9,7 @@ export type input = {
   value?: string
   label: string
   options?: string[]
+  validation?: any
 }
 
 export type node = {
@@ -16,6 +17,7 @@ export type node = {
   text: string
   inputs: input[]
   rules?: RulesLogic
-  destination: Record<string, string>
+  destination: Record<string, string> & { default?: string }
   action: {}
+  value?: any
 }
