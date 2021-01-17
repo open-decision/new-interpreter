@@ -7,9 +7,9 @@ import { Interpreter } from "../components/Interpreter"
 
 const IndexPage = () => {
   return (
-    <Layout className="space-y-3">
+    <Layout>
       <SEO title="Home" />
-      <Interpreter className="mt-12" />
+      <Interpreter />
     </Layout>
   )
 }
