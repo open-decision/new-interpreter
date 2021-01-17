@@ -2,7 +2,11 @@
 @tailwind components;
 
 .radio-toolbar input[type="radio"]:checked + label {
-  @apply bg-purple-200 border-2 border-purple-700;
+  @apply bg-orange-50 border-orange-300 text-orange-900 shadow-lg;
+}
+
+:is(a, button, input) {
+  @apply focus:ring-4 focus:ring-purple-200 focus:outline-none;
 }
 
 @tailwind utilities;
