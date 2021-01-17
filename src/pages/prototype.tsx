@@ -1,10 +1,8 @@
-import React from "react"
 import { Link } from "gatsby"
-
-import { Layout } from "../components/Layout"
+import React from "react"
 import { SEO } from "../components/Seo"
 
-const IndexPage = () => {
+const prototype = () => {
   return (
     <div
       className="grid h-screen overflow-y-scroll"
@@ -23,24 +21,26 @@ const IndexPage = () => {
               Kanzlei Partner und Partner
             </Link>
           </h1>
+          <Link to="/" className="text-white">
+            Zurück zur Startseite
+          </Link>
         </div>
       </header>
-      <SEO title="Home" />
+      <SEO title="Page two" />
       <div className="col-start-2">
-        <p className="pt-3">Ihr Partner im Arbeitsrecht.</p>
-        <p className="pt-3">
-          Starten Sie hier ein automatisiertes Erstgespräch:
+        <p className="text-xl font-semibold pt-6 pb-3">
+          Automatisiertes Erstgespräch
         </p>
-        <Link to="/interpreter" className="text-red-900">
-          Fancy Version (unstable)
-        </Link>
-        <br></br>
-        <Link to="/prototype" className="text-red-900">
-          Open Decision Prototype Standard
-        </Link>
+        <iframe
+          src="http://builder.open-decision.org/publish/cweokeryxe?embedded=true"
+          width="1000"
+          height="600"
+        >
+          Your browser does not support iFrames
+        </iframe>
       </div>
     </div>
   )
 }
 
-export default IndexPage
+export default prototype

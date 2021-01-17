@@ -18,6 +18,6 @@ export type node = {
   inputs: input[]
   rules?: RulesLogic
   destination: Record<string, string> & { default?: string }
-  action: {}
+  action: string[]
   value?: any
 }

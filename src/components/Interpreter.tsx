@@ -79,7 +79,7 @@ export const Interpreter: React.FC<{ className?: string }> = ({
   const addNewNode = (values, node) => {
     const newNodeName = handleLogic({
       rules: node.rules,
-      vars: values[node.name],
+      vars: values[stripWhiteSpace(node.name)],
       destination: node.destination,
     })
 
@@ -89,8 +89,25 @@ export const Interpreter: React.FC<{ className?: string }> = ({
     })
   }
 
-  const handleSubmit = (values: any) => {
-    const changedNodes = getChangedNodes(savedValues, values)
+  const handleSubmit = async (values: any) => {
+    console.log(currentNode)
+
+    if (currentNode.action.includes("email")) {
+      const response = await fetch(`/.netlify/functions/send-email`, {
+        method: `POST`,
+        headers: {
+          Accept: `*`,
+          "Content-Type": `application/json`,
+        },
+        body: JSON.stringify({ values }),
+        redirect: `follow`,
+      })
+
+      console.log(response)
+    }
+
+    //#region
+    // const changedNodes = getChangedNodes(savedValues, values)
 
     // if (!isEmpty(changedNodes)) {
     //   dispatch({
@@ -106,6 +123,8 @@ export const Interpreter: React.FC<{ className?: string }> = ({
     //   return addNewNode(values, tree.questions[currentNode[0]])
     // } else {
     // }
+
+    //#endregion
     try {
       setSavedValues(values)
       return addNewNode(values, currentNode)
@@ -132,6 +151,8 @@ export const Interpreter: React.FC<{ className?: string }> = ({
 
     if (rules) {
       const result = jsonLogic.apply(rules, vars)
+      console.log(result)
+
       return destination[result]
     }
 

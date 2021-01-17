@@ -19,8 +19,8 @@ export const FormWrapper: React.FC<FormWrapperProps> = ({
   return (
     <Formik onSubmit={handleSubmit} initialValues={initialValues}>
       <Form {...props}>
-        {state.map(node => (
-          <div key={node.name} className="max-w-4xl max-h-full">
+        {state.map((node, index) => (
+          <div key={`${node.name}.${index}`} className="max-w-4xl max-h-full">
             <h1 className="text-3xl lg:text-4xl font-semibold border-b-4 border-purple-300 py-2 px-4 border-l-4 rounded-md">
               {node.name}
             </h1>
