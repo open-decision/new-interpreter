@@ -1,52 +1,38 @@
-import { useFormik } from "formik"
+import { Form, Formik } from "formik"
 import React from "react"
-import { input } from "../types/global"
+import { node } from "../types/global"
 import { formElement } from "./FormElements/DynamicFormElement"
 
-export type Form = {
-  inputs: input[]
-  initialValues: Record<string, string>
-  initialized: boolean
-}
-
 type FormWrapperProps = React.HTMLAttributes<HTMLFormElement> & {
-  form: Form
+  state: node[]
   handleSubmit: (values: any) => void
+  initialValues: any
 }
 
 export const FormWrapper: React.FC<FormWrapperProps> = ({
-  form,
+  state,
   handleSubmit,
+  initialValues,
+  children,
   ...props
 }) => {
-  const formik = useFormik({
-    initialValues: form.initialValues,
-    onSubmit: values => handleSubmit(values),
-  })
-
   return (
-    <form onSubmit={formik.handleSubmit} className="mt-6" {...props}>
-      {form.inputs.map(input =>
-        formElement({
-          ...input,
-          value: formik.values[input.name],
-          onChange: formik.handleChange,
-        })
-      )}
-      <div className="flex justify-between">
-        <button
-          type="submit"
-          className="bg-purple-200 border-2 border-purple-700 px-3 py-2 shadow-sm clickable mt-4"
-        >
-          Zurück
-        </button>
-        <button
-          type="submit"
-          className="bg-purple-200 border-2 border-purple-700 px-3 py-2 shadow-sm clickable mt-4"
-        >
-          Weiter
-        </button>
-      </div>
-    </form>
+    <Formik onSubmit={handleSubmit} initialValues={initialValues}>
+      <Form {...props}>
+        {state.map(node => (
+          <div key={node.name} className="max-w-4xl max-h-full">
+            <h1 className="text-3xl lg:text-4xl font-semibold border-b-4 border-purple-300 py-2 px-4 border-l-4 rounded-md">
+              {node.name}
+            </h1>
+            <div
+              className="text-base lg:text-xl mt-6"
+              dangerouslySetInnerHTML={{ __html: node.text }}
+            />
+            {node.inputs.map(input => formElement(input))}
+          </div>
+        ))}
+        {children}
+      </Form>
+    </Formik>
   )
 }
