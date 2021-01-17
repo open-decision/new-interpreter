@@ -156,7 +156,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     schriftlich: {
-      name: "Kündigungsschreiben schriftlich",
+      name: "Kündigungsschreiben - schriftlich",
       text:
         "<p>Haben Sie die K&uuml;ndigung schriftlich erhalten?</p>\n\n<p><em>Info: Eine K&uuml;ndigung per&nbsp;E-Mail erf&uuml;llt diese Voraussetzung nicht. Erforderlich ist ein ausgedrucktes Papier mit der Unterschrift des Arbeitgebers.</em></p>",
       inputs: [
@@ -197,7 +197,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     betriebsrat: {
-      name: "Betriebliche Strukturen",
+      name: "Betriebliche Strukturen - Betriebsrat",
       text: "<p>Gibt es einen Betriebsrat?</p>",
       inputs: [
         {
@@ -523,7 +523,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: ["email"],
     },
     "betriebsrat-einbeziehung": {
-      name: "Betriebliche Strukturen",
+      name: "Betriebliche Strukturen - Einbeziehung",
       text: "<p>Wurde der Betriebsrat in die K&uuml;ndigung einbezogen?</p>",
       inputs: [
         {
@@ -564,7 +564,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     "sofort-anrufen": {
-      name: "sofort anrufen",
+      name: "Sofort anrufen",
       text:
         "<p>Die Frist, um gegen Ihre K&uuml;ndigung vorzugehen, l&auml;uft m&ouml;glicherweise heute ab! Rufen Sie uns bitte sofort an unter&nbsp;+4930 6933087</p>",
       inputs: [],
@@ -588,7 +588,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     krank: {
-      name: "Kündigungsgrund",
+      name: "Kündigungsgrund - Krankheit",
       text: "<p>Waren Sie im letzten Jahr l&auml;nger krank?</p>",
       inputs: [
         {
@@ -635,7 +635,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     gesundheitlich: {
-      name: "Kündigungsgrund",
+      name: "Kündigungsgrund - Gesundheitlich",
       text:
         "<p>Werden Sie in absehbarer Zeit gesundheitlich in der Lage sein, ihre Arbeit fortzuf&uuml;hren?</p>",
       inputs: [
@@ -676,7 +676,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     ausbildung: {
-      name: "Arbeitsverhältnis",
+      name: "Arbeitsverhältnis - Ausbildung",
       text: "<p>Befinden Sie sich in der Ausbildung?</p>",
       inputs: [
         {
@@ -716,7 +716,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     probezeitausbildung: {
-      name: "Ausbildungsverhältnis",
+      name: "Ausbildungsverhältnis - Probezeitausbildung",
       text: "<p>Sind Sie noch in der Probezeit?</p>",
       inputs: [
         {
@@ -756,7 +756,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     befristet: {
-      name: "Arbeitsverhältnis",
+      name: "Arbeitsverhältnis - befristet",
       text: "<p>Haben Sie einen befristeten Arbeitsvertrag?</p>",
       inputs: [
         {
@@ -837,7 +837,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     probezeit: {
-      name: "Arbeitsverhältnis",
+      name: "Arbeitsverhältnis - Probezeit",
       text: "<p>Sind Sie noch in der Probezeit?</p>",
       inputs: [
         {
@@ -877,7 +877,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     personen: {
-      name: "Betriebliche Strukturen",
+      name: "Betriebliche Strukturen - Personen",
       text: "<p>Wie viele Personen sind im Betrieb besch&auml;ftigt?</p>",
       inputs: [
         {
@@ -894,7 +894,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     ausdruecklich: {
-      name: "Arbeitsverhältnis",
+      name: "ausdrückliches Arbeitsverhältnis",
       text:
         "<p>Enth&auml;lt Ihr Arbeitsvertrag eine ausdr&uuml;ckliche K&uuml;ndigungsm&ouml;glichkeit?</p>",
       inputs: [
@@ -976,7 +976,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     personengruppen: {
-      name: "Gespräch mit dem Arbeitgeber",
+      name: "Gespräch mit dem Arbeitgeber - Teilnehmer",
       text:
         "<p>Wer war bei dem Gespr&auml;ch anwesend?</p>\n\n<p><em>Info: Interessant ist etwa die Anwesenheit von&nbsp;Betriebsrat,&nbsp;Personalrat,&nbsp;Schwerbehindertenvertretung,&nbsp;Integrationsamt und&nbsp;Werks-/Betriebsarzt</em></p>",
       inputs: [
