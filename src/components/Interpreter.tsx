@@ -7,6 +7,7 @@ import { FormWrapper } from "./FormWrapper"
 import { reducer, reducerActions } from "./reducer"
 import clsx from "clsx"
 import { equals, isEmpty, pickBy, pipe } from "ramda"
+import { Link } from "gatsby"
 
 type values = Record<string, Record<string, string> | string>
 
@@ -188,6 +189,9 @@ export const Interpreter: React.FC<{ className?: string }> = ({
         <button className={button} onClick={() => dispatch({ type: "RESET" })}>
           Neustarten
         </button>
+        <Link className={button} to="/">
+          Zurück zur Startseite
+        </Link>
       </div>
       <div ref={bottomRef} />
     </>
