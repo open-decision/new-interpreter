@@ -117,7 +117,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
     interessenkonflikt: {
       name: "Interessenkonflikt",
       text:
-        "<p>Ist ihr Arbeitgeber einer unserer &ouml;ffentlichen Partner:</p>\n\n<ul>\n\t<li>Nestl&eacute; Deutschland AG</li>\n\t<li>Shell Deutschland Oil GmbH</li>\n\t<li>BP Europa SE</li>\n\t<li>BAYER AG</li>\n\t<li>LMU M&uuml;nchen</li>\n</ul>\n\n<p><em>Info: In diesem Fall d&uuml;rfen wir sie aufgrund eventueller Interessenkonflikte leider nicht beraten.</em></p>",
+        "<p>Ist ihr Arbeitgeber einer unserer &ouml;ffentlichen Partner:</p>\n\n<ul>\n\t<li>- Nestl&eacute; Deutschland AG</li>\n\t<li>- Shell Deutschland Oil GmbH</li>\n\t<li>- BP Europa SE</li>\n\t<li>- BAYER AG</li>\n\t<li>- LMU M&uuml;nchen</li>\n</ul>\n\n<p><em>Info: In diesem Fall d&uuml;rfen wir sie aufgrund eventueller Interessenkonflikte leider nicht beraten.</em></p>",
       inputs: [
         {
           type: "radio",
