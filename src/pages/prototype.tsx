@@ -32,7 +32,7 @@ const prototype = () => {
           Automatisiertes Erstgespräch
         </p>
         <iframe
-          src="http://builder.open-decision.org/publish/cweokeryxe?embedded=true"
+          src="https://builder.open-decision.org/publish/cweokeryxe?embedded=true"
           width="1000"
           height="600"
         >

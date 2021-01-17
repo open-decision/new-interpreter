@@ -156,7 +156,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     schriftlich: {
-      name: "Kündigungsschreiben",
+      name: "Kündigungsschreiben schriftlich",
       text:
         "<p>Haben Sie die K&uuml;ndigung schriftlich erhalten?</p>\n\n<p><em>Info: Eine K&uuml;ndigung per&nbsp;E-Mail erf&uuml;llt diese Voraussetzung nicht. Erforderlich ist ein ausgedrucktes Papier mit der Unterschrift des Arbeitgebers.</em></p>",
       inputs: [
@@ -278,7 +278,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     ausschlussfrist: {
-      name: "Kündigungsschreiben",
+      name: "Kündigungsschreiben Ausschlussfrist",
       text:
         "<p>An welchem Tag haben Sie das letzte Schreiben Ihres Arbeitgebers bekommen?<br>\n<br>\n<em>Info: Haben Sie das K&uuml;ndigungsschreiben vor mehr als 21 Tagen erhalten, kann in der Regel nicht mehr dagegen vorgegangen werden. In diesem Fall k&ouml;nnen wir Ihnen leider nicht weiterhelfen.</em></p>\n\n<p>bitte die Anzahl der vergangenen&nbsp;Tage angeben:</p>",
       inputs: [
@@ -572,7 +572,7 @@ export const tree: { header: any; questions: Record<string, node> } = {
       action: [],
     },
     geltungsdatum: {
-      name: "Kündigungsschreiben",
+      name: "Kündigungsschreiben Geltungsdatum",
       text: "<p>Ab wann soll die K&uuml;ndigung laut Schreiben gelten?</p>",
       inputs: [
         {

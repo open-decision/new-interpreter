@@ -91,8 +91,6 @@ export const Interpreter: React.FC<{ className?: string }> = ({
   }
 
   const handleSubmit = async (values: any) => {
-    console.log(currentNode)
-
     if (currentNode.action.includes("email")) {
       const response = await fetch(`/.netlify/functions/send-email`, {
         method: `POST`,
