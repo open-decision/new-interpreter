@@ -62,6 +62,28 @@ export const tree: { header: any; questions: Record<string, node> } = {
           options: ["Ja", "Nein"],
         },
       ],
+      rules: {
+        if: [
+          {
+            in: [
+              {
+                var: "ankundigung",
+              },
+              ["Ja"],
+            ],
+          },
+          "0",
+          {
+            in: [
+              {
+                var: "ankundigung",
+              },
+              ["Nein"],
+            ],
+          },
+          "1",
+        ],
+      },
       destination: {
         "0": "ankundigungsart",
         "1": "musterschreibenankundig",
@@ -81,6 +103,28 @@ export const tree: { header: any; questions: Record<string, node> } = {
           options: ["Ja", "Nein"],
         },
       ],
+      rules: {
+        if: [
+          {
+            in: [
+              {
+                var: "limit",
+              },
+              ["Ja"],
+            ],
+          },
+          "0",
+          {
+            in: [
+              {
+                var: "limit",
+              },
+              ["Nein"],
+            ],
+          },
+          "1",
+        ],
+      },
       destination: {
         "0": "musterschreiben",
         "1": "vielen-dank",
@@ -163,6 +207,28 @@ export const tree: { header: any; questions: Record<string, node> } = {
           options: ["Ja", "Nein"],
         },
       ],
+      rules: {
+        if: [
+          {
+            in: [
+              {
+                var: "4euro",
+              },
+              ["Ja"],
+            ],
+          },
+          "0",
+          {
+            in: [
+              {
+                var: "4euro",
+              },
+              ["Nein"],
+            ],
+          },
+          "1",
+        ],
+      },
       destination: {
         "0": "musterschreiben",
         "1": "vielen-dank",
@@ -182,6 +248,28 @@ export const tree: { header: any; questions: Record<string, node> } = {
           options: ["Ja", "Nein"],
         },
       ],
+      rules: {
+        if: [
+          {
+            in: [
+              {
+                var: "3euro",
+              },
+              ["Ja"],
+            ],
+          },
+          "0",
+          {
+            in: [
+              {
+                var: "3euro",
+              },
+              ["Nein"],
+            ],
+          },
+          "1",
+        ],
+      },
       destination: {
         "0": "musterschreiben",
         "1": "vielen-dank",
