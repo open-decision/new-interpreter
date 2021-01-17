@@ -28,7 +28,10 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className="col-start-2">
         <p className="pt-3">Ihr Partner im Arbeitsrecht.</p>
-        <p className="pt-3">
+        <h3 className="text-2xl border-b-4 border-l-4 border-red-600 max-w-max pb-1 pl-2 mt-12">
+          Wurde Ihnen gekündigt?
+        </h3>
+        <p className="pt-3 text-lg mb-4">
           Starten Sie hier ein automatisiertes Erstgespräch:
         </p>
         <Link to="/interpreter" className="text-red-900">
