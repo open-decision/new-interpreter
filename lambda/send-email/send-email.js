@@ -915,7 +915,7 @@ exports.handler = async event => {
   })
 
   const msg = {
-    to: "phil.garbowsky@gmail.com",
+    to: "hackathon2021munich@gmail.com",
     from: "noreply@open-decision.org",
     subject: "Eine neue Mandantenanfrage",
     html: htmlToSend,
