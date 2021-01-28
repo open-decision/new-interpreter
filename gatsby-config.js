@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Shady Lawyer Inc.`,
+    title: `Kanzlei Partner & Partner`,
     description: ``,
     author: `Open Legal Tech e.V.`,
   },
