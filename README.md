@@ -1,6 +1,6 @@
-# Base Website
+# Interpreter
 
-This is a base website for static websites (i.e. landing pages). Just fork it and get going!
+This is a WIP remake of the Open Decision interpreter.
 
 ## Get it running
 
